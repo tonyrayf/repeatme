@@ -1,0 +1,33 @@
+.infoBox {
+    position: fixed; /* Фиксированное позиционирование */
+    top: 20%; /* Отступ сверху */
+    right: 20px; /* Отступ справа */
+    width: 300px; /* Ширина окошка */
+    padding: 20px;
+    border: 1px solid #aaa;
+    border-radius: 10px; /* Плавные края */
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Убедитесь, что окошко поверх других элементов */
+}
+
+.image {
+    width: 100%; /* Ширина изображения */
+    height: auto; /* Автоматическая высота */
+    border-radius: 5px; /* Плавные края для изображения */
+}
+
+.closeButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Плавные края для кнопки */
+    background-color: #0070f3; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.closeButton:hover {
+    background-color: #005bb5; /* Цвет кнопки при наведении */
+}

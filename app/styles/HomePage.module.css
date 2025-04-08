@@ -1,6 +1,29 @@
-.HomePage {
+.homePage {
+    margin: 0;
+    padding: 0;
     background: #ffffff;
     color: #000000;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 125%;
+}
+
+.buttons {
+    margin-top: calc(50vh - 150px - 72px + 20px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 165px;
+}
+
+.header {
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 72px;
+    background-color: #89939a;
+}
+
+.logo {
+    margin-left: 30px;
+    margin-top: 12px;
+    width: 30px;
 }

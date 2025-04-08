@@ -1,18 +1,17 @@
 import styles from "../styles/Button.module.css";
-import Link from "next/link";
 
-interface props
-{
-    name : string,
-    image : string
+interface Props {
+    name: string;
+    image: string;
+    onClick: () => void;
 }
 
-export default function Button({name, image} : props)
-{
+export default function Button({ name, image, onClick }: Props) {
     return (
-    <div className={styles.button}>
-        <img src={image} className={styles.img} />
-        {name}
-    </div>
+        <div className={styles.button} onClick={onClick}>
+            <img src={image} className={styles.img} alt={name} />
+            <br />
+            {name}
+        </div>
     );
 }

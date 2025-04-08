@@ -43,4 +43,4 @@ next-env.d.ts
 
 backend/.idea
 backend/.venv
-backend/files/__pycache__
+backend/files
