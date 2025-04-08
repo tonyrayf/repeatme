@@ -1,0 +1,21 @@
+.card {
+    margin: 0;                  /* Убираем отступы, чтобы избежать лишнего пространства */
+    display: flex;             /* flex для центрирования содержимого */
+    flex-direction: column;     /* Располагаем содержимое карточки вертикально */
+    align-items: center;        /* Центрируем содержимое карточки */
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 140%;
+    font-family: "Segoe UI";
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    width: 300px;
+}
+.card:hover {
+    transform: scale(103%);
+}
+.card:active {
+    transform: scale(100%);
+}
