@@ -1,0 +1,8 @@
+.line {
+    border: none;
+    top: calc(50vh - 35px);
+    padding: 3px 400px;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(178, 184, 185);
+}

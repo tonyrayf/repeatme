@@ -1,8 +1,15 @@
 import repeat as rep
 import json
 
-invN1 = 173.6
-N2 = 118.6
+
+k1 = 127.7
+k2 = 176.466 # 176,466
+good_pressure = 5000
+bad_pressure = 10000
+
+good_flow_rate = 242.518 # 242,518
+bad_flow_rate = good_flow_rate * 0.95
+
 
 user = rep.User(token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjQwNzA5OTUxOTksImlhdCI6MTc0NDAyNjA1OSwidXNlcklkIjoxNjQ2fQ.LRSXCxTEcTfZp9TTl85SapyTUh4XrLtBU6J9LqdD0PY")
 
@@ -16,15 +23,19 @@ model = app.get_exploration_model(project_id, time_interval)
 
 exist_vars = model.existing_variables
 
+
 with model as M:
     M.run(exist_vars)
 
     flow_rate = M.get_results("mass_flowrate")[total_time]
-    measure_pressure = M.get_results("measure_drop_press_filter")[total_time]
+    pressure = M.get_results("measure_drop_press_filter")[total_time]
+
+resistance = pressure / k1
 
 data = {
-    "flow_rate" : flow_rate,
-    "pressure" : measure_pressure 
+    "flowRate" : flow_rate,
+    "pressure" : pressure,
+    "resistance" : "{:.2f}".format(resistance)
 }
 
 

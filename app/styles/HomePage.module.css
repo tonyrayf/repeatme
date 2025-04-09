@@ -14,16 +14,30 @@
     gap: 165px;
 }
 
-.header {
-    box-sizing: border-box;
-
-    width: 100vw;
-    height: 72px;
-    background-color: #89939a;
+.activateButton {
+    position: fixed;
+    top: 20px;
+    right: 145px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.logo {
-    margin-left: 30px;
-    margin-top: 12px;
-    width: 30px;
+.running {
+    background-color: #ff4d4d; /* Красный цвет для остановки */
+}
+
+.running:hover {
+    background-color: #ff1a1a; /* Темнее при наведении */
+}
+
+.stopped {
+    background-color: #4caf50; /* Зеленый цвет для запуска */
+}
+
+.stopped:hover {
+    background-color: #45a049; /* Темнее при наведении */
 }

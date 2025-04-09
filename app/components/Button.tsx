@@ -1,4 +1,7 @@
 import styles from "../styles/Button.module.css";
+import localFont from 'next/font/local';
+
+const Font = localFont({src: "../fonts/Martian-Mono.ttf"})
 
 interface Props {
     name: string;
@@ -8,7 +11,7 @@ interface Props {
 
 export default function Button({ name, image, onClick }: Props) {
     return (
-        <div className={styles.button} onClick={onClick}>
+        <div className={`${styles.button} ${Font.className}`} onClick={onClick}>
             <img src={image} className={styles.img} alt={name} />
             <br />
             {name}

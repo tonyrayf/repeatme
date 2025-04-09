@@ -1,17 +1,21 @@
 import styles from "../styles/InfoBox.module.css";
+import localFont from 'next/font/local';
+
+const Font = localFont({ src: "../fonts/Martian-Mono.ttf" });
 
 interface InfoBoxProps {
-    title: string;
-    image: string;
+    param: string | null;
+    value: string;
+    measure: string;
+    stateMsg: string;
     onClose: () => void;
 }
 
-export default function InfoBox({ title, image, onClose } : InfoBoxProps) {
+export default function InfoBox({ param, value, measure, stateMsg, onClose }: InfoBoxProps) {
     return (
         <div className={styles.infoBox}>
-            <p>Информация о {title}</p>
-            <p>Это изображение: {image}</p>
-            <button onClick={onClose}>Закрыть</button>
+            <p className={Font.className}>{param}: {value}{' '}{measure}<br/>Состояние: {stateMsg}</p>
+            <button className={Font.className} onClick={onClose}>Закрыть</button>
         </div>
     );
-};
+}

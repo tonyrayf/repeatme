@@ -1,0 +1,29 @@
+.header {
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 72px;
+    background-color: #89939a;
+}
+
+.logo {
+    position: relative;
+    width: 30px;
+}
+.logoLink {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 11px 25px;
+    transition: background-color 0.2s;
+}
+.logoLink:hover {
+    background-color: #838d94;
+}
+
+.user {
+    position: absolute;
+    right: 30px;
+    top: 12px;
+    width: 50px;
+}
