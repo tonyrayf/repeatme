@@ -2,6 +2,9 @@ import repeat as rep
 import json
 
 
+cfg = open("../../app/config.txt", "r")
+
+
 k1 = 127.7
 k2 = 176.466 # 176,466
 good_pressure = 5000
@@ -25,6 +28,8 @@ exist_vars = model.existing_variables
 
 
 with model as M:
+    exist_vars["FILTER_RESIST_COEFF"] = int(cfg.read())
+
     M.run(exist_vars)
 
     flow_rate = M.get_results("mass_flowrate")[total_time]
